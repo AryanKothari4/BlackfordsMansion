@@ -13,12 +13,9 @@ body {
 #overlay {
   position: fixed;
   inset: 0;
-  /* --- UPDATED: New background image for a more fitting mysterious/aged mansion feel --- */
-  background: url('https://images.unsplash.com/photo-1586809296050-4505754006f5?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; /* Dark, textured abstract - could evoke old wallpaper/wall */
-  /* Alternative suggestions if you want to try others: */
-  /* background: url('https://images.unsplash.com/photo-1532003410875-863c3885e2d0?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; /* Old paper texture */
-  /* background: url('https://www.transparenttextures.com/patterns/old-wall.png') repeat; /* Repeating old wall texture */
-  opacity: 0.12; /* Keeps it subtle as before */
+  /* --- UPDATED: New background image - large mansion exterior --- */
+  background: url('https://images.unsplash.com/photo-1506126391636-1503c8dcf736?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; /* Image of a large, somewhat spooky mansion */
+  opacity: 0.12; /* This will keep it "tuned down" and subtle */
   z-index: 0;
   pointer-events: none;
 }
