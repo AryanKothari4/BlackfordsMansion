@@ -6,7 +6,7 @@ const gameData = {
 
 const slides = {
   "1": {
-    story: "You wake up and are standing at the door of your room. Your mind is in a daze. You can’t remember why you’re there. Only thing you remember about last night is falling asleep.<br><br>What do you do?",
+    story: "You wake up and are standing at the door of your room. Your mind is in a daze. You can’t remember why you’re standing there. The only thing you remember about last night is falling asleep.<br><br>What do you do?",
     choices: [
       { text: "Open the door and go out.", goto: "2" },
       { text: "Go to bed.", goto: "3" }
