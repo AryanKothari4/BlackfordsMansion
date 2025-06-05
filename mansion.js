@@ -9,15 +9,15 @@ const slides = {
     story: "You wake up and are standing at the door of your room. Your mind is in a daze. You can’t remember why you’re standing there. The only thing you remember about last night is falling asleep.<br><br>What do you do?",
     choices: [
       { text: "Open the door and go out.", goto: "2" },
-      { text: "Go to bed.", goto: "3" }
+      { text: "Go back to bed.", goto: "3" }
     ]
   },
   "2": {
-    story: "You see a completely new, very royal looking hallway that is nothing like your house. It seems as if you are in a mansion. The ground has a red carpet on the ground with gold linings. The walls are red and have big torches that are lit up. The hallway goes left and right.<br><br>What do you do?",
+    story: "You see a completely new, very royal looking hallway that is nothing like your house. It seems as if you are in a mansion. The ground has a red carpet with gold linings. The walls are red and have big torches that are lit up. The hallway goes left and right.<br><br>What do you do?",
     choices: [
-      { text: "Go Left towards a dead end.", goto: "5" },
-      { text: "Go right towards a T-shaped intersection.", goto: "6" },
-      { text: "Try to go back into your room.", goto: "7" }
+      { text: "Go left towards a dead end.", goto: "5" },
+      { text: "Go right towards an intersection.", goto: "6" },
+      { text: "Go back into your room.", goto: "7" }
     ]
   },
   "3": {
@@ -42,10 +42,10 @@ const slides = {
     ]
   },
   "6": {
-    story: "You reach the end of the royal-looking hallway and arrive at a t-shaped intersection. You feel as if you are being beckoned to the left, but don’t know what it is.<br><br>What do you do?",
+    story: "You reach the end of the royal-looking hallway and arrive at a t-shaped intersection. You feel as if you are being beckoned to the left, but don’t know what it is. There isn't a feeling coming from the right, so you don't know what to do.<br><br>What do you do?",
     choices: [
-      { text: "Follow the feeling and go left.", goto: "12" },
-      { text: "Go against your gut feeling and go right.", goto: "13" }
+      { text: "Follow the feeling.", goto: "12" },
+      { text: "Go against the feeling.", goto: "13" }
     ]
   },
   "7": {
@@ -87,7 +87,7 @@ const slides = {
   "13": {
     story: "You walk for a bit and find a fork. You can go left or straight. There is a painting on the wall of the road that goes straight. The painting is of two eyes in darkness peering at you with a gaze so disturbing it penetrates your soul. To the left is a very curvy and windy road. The feeling of beckoning was coming from there.<br><br>What do you do?",
     choices: [
-      { text: "Go down the windy road.", goto: "18" },
+      { text: "Go down the curvy, windy road.", goto: "18" },
       { text: "Go down the road with the painting on it.", goto: "19" }
     ]
   },
