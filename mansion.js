@@ -23,7 +23,7 @@ const slides = {
     story: "You go to lay down in bed, but when you lay down you just phase right through it. You roll out from under the bed in pain. How did that just happen? You didn’t even feel the bed.<br><br>What do you do?",
     choices: [
       { text: "Open the door and go out.", goto: "2" },
-      { text: "Look around the room.", goto: "4" }
+      { text: "Examine the room.", goto: "4" }
     ]
   },
   "4": {
@@ -41,7 +41,7 @@ const slides = {
     ]
   },
   "6": {
-    story: "You reach the end of the royal-looking hallway and arrive at a t-shaped intersection. You feel as if you are being beckoned to the left, but don’t know what it is. There isn't a feeling coming from the right, so you don't know what to do.<br><br>What do you do?",
+    story: "You reach the end of the royal-looking hallway and arrive at a t-shaped intersection. You feel as if you are being beckoned to the left, but don’t know what it is. There isn't any feeling coming from the right.<br><br>What do you do?",
     choices: [
       { text: "Follow the feeling.", goto: "12" },
       { text: "Go against the feeling.", goto: "13" }
@@ -73,14 +73,14 @@ const slides = {
     story: "You decide that it isn’t worth it. It looks as if some creature made those holes. You walk back to the door of your bedroom.<br><br>What do you do?",
     choices: [
       { text: "Go to the right towards the t-shaped intersection from before.", goto: "6" },
-      { text: "Try to go back into your room.", goto: "7" }
+      { text: "Go back into your room.", goto: "7" }
     ]
   },
   "12": {
     story: "The road goes straight for a while and then turns left. You keep going and reach a weird chamber that goes around in a circle with an abyss in the middle. The only light in the room are the torches around you on the walls.<br><br>What do you do?",
     choices: [
       { text: "Think for a bit.", goto: "16" },
-      { text: "Take a look into the abyss.", goto: "17" }
+      { text: "Peek into the abyss.", goto: "17" }
     ]
   },
   "13": {
