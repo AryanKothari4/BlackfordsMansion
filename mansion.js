@@ -1,6 +1,5 @@
-// ========== State & Data ==========
 const gameData = {
-  inventory: {}, // Retained for potential future expansion, not used by current story
+  inventory: {}, 
   slide: "1",
 };
 
@@ -238,15 +237,15 @@ const storyEl = document.getElementById('story');
 const choicesEl = document.getElementById('choices');
 const endEl = document.getElementById('end');
 const bgm = document.getElementById('bgm');
-const thunder = document.getElementById('thunder'); // Retained, but not actively used by new story logic
+const thunder = document.getElementById('thunder');
 
 // ========== Utility ==========
 function playBGM() {
   bgm.volume = 0.25;
-  bgm.play().catch(()=>{}); // Catch autoplay errors
+  bgm.play().catch(()=>{}); 
 }
 
-function playThunder() { // Retained, can be called if needed
+function playThunder() {
   thunder.currentTime = 0;
   thunder.volume = 0.5;
   thunder.play().catch(()=>{});
@@ -332,6 +331,4 @@ function restartGame() {
 window.onload = function() {
   playBGM(); // Start background music
   render();  // Render the initial slide
-  // The specific thunder trigger on story click from the old game is removed
-  // as it's not part of the new story's explicit requirements.
 };
