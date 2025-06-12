@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral:wght@700&display=swap');
 
 body {
   margin: 0;
@@ -6,7 +6,7 @@ body {
   background: linear-gradient(135deg, #232526 0%, #1a191b 100%);
   color: #e3e3e3;
   min-height: 100vh;
-  font-family: 'Spectral SC', serif;
+  font-family: 'Spectral', serif;
   overflow-x: hidden;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 #choices button {
-  font-family: 'Cinzel', serif;
+  font-family: 'Spectral', serif;
   font-size: 1.07em;
   background: linear-gradient(90deg, #4b3f5c 0%, #232526 100%);
   color: #fff8e7;
@@ -95,7 +95,7 @@ body {
 #end {
   margin-top: 2.5em;
   font-size: 1.35em;
-  font-family: 'Cinzel', serif;
+  font-family: 'Spectral', serif;
   text-align: center;
   color: #f8f8f2;
   text-shadow: 0 0 10px #c678dd;
