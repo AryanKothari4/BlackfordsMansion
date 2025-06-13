@@ -1,15 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral:wght@700&display=swap');
+/* ===== GOOGLE FONTS IMPORT ===== */
+/* EB Garamond: An elegant, readable serif for the main story text. */
+/* Cinzel: A dramatic, all-caps font for buttons and impactful messages. */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:wght@400;700&display=swap');
 
+/* ===== CSS VARIABLES (THEME) ===== */
+:root {
+  /* Colors */
+  --color-bg: #232526;
+  --color-bg-gradient-end: #1a191b;
+  --color-container-bg: rgba(34, 32, 38, 0.92);
+  --color-text-primary: #e3e3e3;
+  --color-text-story: #f8f8f2;
+  --color-accent-dark: #4b3f5c;
+  --color-accent-light: #c678dd;
+  --color-button-text: #fff8e7;
+  --color-black-shadow: rgba(0,0,0,0.85);
+
+  /* Typography */
+  --font-body: 'EB Garamond', serif;
+  --font-display: 'Cinzel', serif;
+}
+
+/* ===== GLOBAL STYLES ===== */
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #232526 0%, #1a191b 100%);
-  color: #e3e3e3;
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-gradient-end) 100%);
+  color: var(--color-text-primary);
   min-height: 100vh;
-  font-family: 'Spectral', serif;
   overflow-x: hidden;
 }
 
+/* ===== LAYOUT & BACKGROUND ===== */
 #overlay {
   position: fixed;
   inset: 0;
@@ -24,89 +47,83 @@ body {
   z-index: 1;
   max-width: 520px;
   margin: 60px auto;
-  background: rgba(34, 32, 38, 0.92);
-  border-radius: 18px;
-  box-shadow: 0 10px 48px rgba(0,0,0,0.85);
   padding: 38px 32px 26px 32px;
-  border: 2px solid #4b3f5c;
+  background: var(--color-container-bg);
+  border: 2px solid var(--color-accent-dark);
+  border-radius: 18px;
+  box-shadow: 0 10px 48px var(--color-black-shadow);
 }
 
-/*
-#title {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5em;
-  color: #e5c07b;
-  letter-spacing: 2px;
-  margin-bottom: 0.2em;
-  text-shadow: 2px 2px 10px #000, 0 0 10px #4b3f5c;
-}
-
-#subtitle {
-  font-size: 1.2em;
-  color: #c678dd;
-  font-family: 'Spectral SC', serif;
-  margin-top: 0;
-  margin-bottom: 2em;
-  text-shadow: 1px 1px 8px #000;
-}
-*/
-
+/* ===== COMPONENTS ===== */
 #story {
-  font-size: 1.22em;
+  font-size: 1.25em; /* Slightly increased for better readability */
+  font-weight: 400; /* Regular weight for body text */
+  line-height: 1.6; /* Increased for better spacing between lines */
   margin-bottom: 2em;
-  min-height: 120px; /* Provides a consistent space for the story text */
-  color: #f8f8f2;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+  min-height: 120px;
+  color: var(--color-text-story);
   text-shadow: 1px 1px 7px #222;
 }
 
 #choices {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 #choices li {
   margin-bottom: 16px;
+  text-align: center; /* Centers the button within the list item */
 }
 
 #choices button {
-  font-family: 'Spectral', serif;
+  font-family: var(--font-display);
   font-size: 1.07em;
-  background: linear-gradient(90deg, #4b3f5c 0%, #232526 100%);
-  color: #fff8e7;
-  border: 0;
+  color: var(--color-button-text);
+  background: linear-gradient(90deg, var(--color-accent-dark) 0%, var(--color-bg) 100%);
+  border: none;
   border-radius: 8px;
   padding: 14px 32px;
   cursor: pointer;
-  box-shadow: 0 4px 18px #0004;
-  margin-right: 10px; /* If you want buttons centered, you might remove this and add text-align: center; to #choices li */
-  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
   outline: none;
   letter-spacing: 1px;
 }
 
 #choices button:hover {
-  background: linear-gradient(90deg, #c678dd 0%, #4b3f5c 100%);
+  background: linear-gradient(90deg, var(--color-accent-light) 0%, var(--color-accent-dark) 100%);
   color: #fff;
-  transform: scale(1.03);
+  transform: translateY(-2px) scale(1.02); /* More engaging hover effect */
+  box-shadow: 0 6px 22px rgba(0,0,0,0.3);
 }
 
 #end {
-  margin-top: 2.5em;
+  font-family: var(--font-display);
   font-size: 1.35em;
-  font-family: 'Spectral', serif;
+  color: var(--color-text-story);
+  margin-top: 2.5em;
   text-align: center;
-  color: #f8f8f2;
-  text-shadow: 0 0 10px #c678dd;
+  text-shadow: 0 0 10px var(--color-accent-light);
 }
 
+/* ===== RESPONSIVE DESIGN FOR MOBILE ===== */
 @media (max-width: 600px) {
   .container {
-    padding: 14px 7px 18px 7px;
-    margin: 28px 2vw;
+    padding: 24px 16px; /* Adjusted padding for mobile */
+    margin: 28px 16px;
   }
-  /* #title { font-size: 1.5em; } (Removed as #title is not used to display text) */
-  #story { font-size: 1em; min-height: 90px; }
-  #end { font-size: 1.1em; }
+
+  #story { 
+    font-size: 1.1em; 
+    min-height: 90px; 
+  }
+
+  #choices button {
+    width: 100%; /* Makes buttons full-width for easy tapping */
+  }
+
+  #end { 
+    font-size: 1.2em; 
+  }
 }
